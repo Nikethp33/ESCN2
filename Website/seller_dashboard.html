@@ -11,8 +11,14 @@
 
     <header class="seller-header">
         <div class="header-container">
-            <h1><i class="fa-solid fa-store"></i> Seller Dashboard</h1>
-            <a href="index.html" class="logout-btn">Logout</a>
+            <a href="seller_dashboard.html" class="logo"><i class="fa-solid fa-store"></i> EcoMart Seller</a>
+            <div class="header-actions">
+                <a href="seller_account.html" class="nav-icon-btn">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Account</span>
+                </a>
+                <a href="index.html" class="logout-btn">Logout</a>
+            </div>
         </div>
     </header>
 
@@ -23,6 +29,7 @@
                 <li><a href="#dashboard" id="nav-dashboard" class="active"><i class="fa-solid fa-chart-line"></i> Dashboard</a></li>
                 <li><a href="#my-products" id="nav-products"><i class="fa-solid fa-box-archive"></i> My Products</a></li>
                 <li><a href="#add-product" id="nav-add-product"><i class="fa-solid fa-plus-circle"></i> Add New Product</a></li>
+                <li><a href="seller_orders.html"><i class="fa-solid fa-receipt"></i> Incoming Orders</a></li>
                 <li><a href="#settings"><i class="fa-solid fa-gear"></i> Settings</a></li>
             </ul>
         </nav>
@@ -60,7 +67,7 @@
                                 <th>Product Name</th>
                                 <th>Category</th>
                                 <th>Price</th>
-                                <th>Quantity</th>
+                                <th>Stock</th>
                                 <th>Expiry Date</th>
                                 <th>Actions</th>
                             </tr>
@@ -72,17 +79,6 @@
                                 <td>$1.50</td>
                                 <td>20</td>
                                 <td>2025-11-03</td>
-                                <td>
-                                    <button class="btn-edit"><i class="fa-solid fa-pen"></i></button>
-                                    <button class="btn-delete"><i class="fa-solid fa-trash"></i></button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Organic Mangoes</td>
-                                <td>Seasonal</td>
-                                <td>$4.00</td>
-                                <td>50</td>
-                                <td>2025-11-05</td>
                                 <td>
                                     <button class="btn-edit"><i class="fa-solid fa-pen"></i></button>
                                     <button class="btn-delete"><i class="fa-solid fa-trash"></i></button>
@@ -119,7 +115,7 @@
                             <input type="number" id="discount-price" step="0.01" min="0" required>
                         </div>
                         <div class="input-group">
-                            <label for="product-quantity">Quantity</label>
+                            <label for="product-quantity">Stock Quantity</label>
                             <input type="number" id="product-quantity" min="1" required>
                         </div>
                         <div class="input-group">
@@ -127,22 +123,13 @@
                             <input type="date" id="expiry-date" required>
                         </div>
                     </div>
-                    <div class="input-group">
-                        <label for="product-description">Description</label>
-                        <textarea id="product-description" rows="4"></textarea>
-                    </div>
-                    <div class="input-group">
-                        <label for="product-image">Product Image</label>
-                        <input type="file" id="product-image" accept="image/*">
-                    </div>
-                    <p id="form-error" class="error-text"></p>
-                    <button type="submit" class="submit-btn">Add Product to Store</button>
+                    <button type="submit" class="form-button">Add Product</button>
                 </form>
             </section>
             
             <section id="settings" class="content-section">
                 <h2>Settings</h2>
-                <p>Manage your account and payment details here.</p>
+                <p>Manage your seller profile and payout details here.</p>
             </section>
 
         </main>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incoming Orders - EcoMart</title>
+    <link rel="stylesheet" href="seller_dashboard.css">
+    <link rel="stylesheet" href="account.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <header class="seller-header">
+        <div class="header-container">
+            <a href="seller_dashboard.html" class="logo"><i class="fa-solid fa-store"></i> EcoMart Seller</a>
+            <div class="header-actions">
+                <a href="account.html" class="nav-icon-btn">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Account</span>
+                </a>
+                <a href="index.html" class="logout-btn">Logout</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="dashboard-container">
+        <nav class="sidebar">
+            <ul>
+                <li><a href="seller_dashboard.html#dashboard"><i class="fa-solid fa-chart-line"></i> Dashboard</a></li>
+                <li><a href="seller_dashboard.html#my-products"><i class="fa-solid fa-box-archive"></i> My Products</a></li>
+                <li><a href="seller_dashboard.html#add-product"><i class="fa-solid fa-plus-circle"></i> Add New Product</a></li>
+                <li><a href="seller_orders.html" class="active"><i class="fa-solid fa-receipt"></i> Incoming Orders</a></li>
+                <li><a href="seller_dashboard.html#settings"><i class="fa-solid fa-gear"></i> Settings</a></li>
+            </ul>
+        </nav>
+
+        <main class="main-content">
+            <section class="content-section active">
+                <h2>Incoming Orders</h2>
+                
+                <div class="order-card-list">
+                    
+                    <div class="order-card">
+                        <div class="order-card-header">
+                            <span class="order-info">ORDER PLACED: 01 Nov 2025</span>
+                            <span class="order-info">BUYER: Alex D.</span>
+                            <span class="order-info">ORDER #: 123-456789-001</span>
+                        </div>
+                        <div class="order-item">
+                            <img src="https://via.placeholder.com/100/D4EDDA/28A745?text=Bread" alt="Bread" class="order-item-img">
+                            <div class="order-item-details">
+                                <h3>Whole Wheat Bread (x1)</h3>
+                                <p class="order-status status-transit">
+                                    <i class="fa-solid fa-box-open"></i> Awaiting Shipment
+                                </p>
+                            </div>
+                            <button class="form-button track-button">Mark as Shipped</button>
+                        </div>
+                    </div>
+
+                    <div class="order-card">
+                        <div class="order-card-header">
+                            <span class="order-info">ORDER PLACED: 31 Oct 2025</span>
+                            <span class="order-info">BUYER: Maria S.</span>
+                            <span class="order-info">ORDER #: 123-456789-004</span>
+                        </div>
+                        <div class="order-item">
+                            <img src="https://via.placeholder.com/100/F8D7DA/DC3545?text=Milk" alt="Milk" class="order-item-img">
+                            <div class="order-item-details">
+                                <h3>Fresh Milk (x2)</h3>
+                                <p class="order-status status-transit">
+                                    <i class="fa-solid fa-truck-fast"></i> In Transit
+                                </p>
+                            </div>
+                            <button class="form-button-outline track-button">Track Package</button>
+                        </div>
+                    </div>
+
+                    <div class="order-card">
+                        <div class="order-card-header">
+                            <span class="order-info">ORDER PLACED: 28 Oct 2025</span>
+                            <span class="order-info">BUYER: John D.</span>
+                            <span class="order-info">ORDER #: 123-456789-002</span>
+                        </div>
+                        <div class="order-item">
+                            <img src="https://via.placeholder.com/100/E2E3E5/6C757D?text=Eggs" alt="Eggs" class="order-item-img">
+                            <div class="order-item-details">
+                                <h3>Organic Eggs (12) (x1)</h3>
+                                <p class="order-status status-delivered">
+                                    <i class="fa-solid fa-check-circle"></i> Delivered
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div> </section>
+        </main>
+    </main>
+
+</body>
+</html>

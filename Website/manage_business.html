@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Business - EcoMart</title>
+    <link rel="stylesheet" href="seller_dashboard.css">
+    <link rel="stylesheet" href="account.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <header class="seller-header">
+        <div class="header-container">
+            <a href="seller_dashboard.html" class="logo"><i class="fa-solid fa-store"></i> EcoMart Seller</a>
+            <div class="header-actions">
+                <a href="seller_account.html" class="nav-icon-btn">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Account</span>
+                </a>
+                <a href="index.html" class="logout-btn">Logout</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="account-container">
+        
+        <a href="seller_account.html" class="back-link"><i class="fa-solid fa-chevron-left"></i> Back to Seller Account</a>
+        <h1>Manage Your Business</h1>
+
+        <form class="account-form">
+            
+            <div class="form-card">
+                <h3>Business Information</h3>
+                <div class="input-group">
+                    <label for="business-name">Business Name</label>
+                    <input type="text" id="business-name" value="EcoFarm Dairy" required>
+                </div>
+                <div class="input-group">
+                    <label for="gstin">GSTIN Number</label>
+                    <input type="text" id="gstin" value="29ABCDE1234F1Z5" required>
+                </div>
+                <div class="input-group">
+                    <label for="pickup-address">Default Pickup Address</label>
+                    <textarea id="pickup-address" rows="3" required>123 Farm Rd, Bengaluru, 560001</textarea>
+                </div>
+                <button type="button" class="form-button">Save Changes</button>
+            </div>
+
+        </form>
+    </main>
+
+</body>
+</html>

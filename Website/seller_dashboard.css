@@ -1,8 +1,8 @@
 /* ======== GLOBAL & BODY ======== */
 :root {
-    /* NEW: Coffee Palette */
+    /* Coffee Palette */
     --primary-color: #561C24;   /* Deep Maroon */
-    --accent-color: #6D2932;    /* Medium Maroon (for seller) */
+    --accent-color: #6D2932;    /* Medium Maroon */
     --background-color: #C7B7A3; /* Taupe */
     --card-background: #E8D8C4; /* Light Cream */
     --danger-color: #dc3545;
@@ -15,18 +15,17 @@
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     margin: 0;
-    background-color: var(--background-color); /* NEW: Taupe */
+    background-color: var(--background-color);
     color: var(--text-color);
 }
 
-/* NEW: Serif font for headings */
 h1, h2, h3, h4, .logo {
     font-family: "Times New Roman", Times, serif;
 }
 
 /* ======== HEADER ======== */
 .seller-header {
-    background-color: var(--card-background); /* NEW: Light Cream */
+    background-color: var(--card-background);
     border-bottom: 1px solid var(--border-color);
     padding: 0 2rem;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
@@ -39,15 +38,32 @@ h1, h2, h3, h4, .logo {
     max-width: 1400px;
     margin: 0 auto;
 }
-
-.seller-header h1 {
+.logo {
     font-size: 1.5rem;
-    color: var(--primary-color); /* NEW: Deep Maroon */
+    font-weight: bold;
+    color: var(--primary-color);
+    text-decoration: none;
 }
-.seller-header h1 i {
-    color: var(--primary-color); /* NEW: Deep Maroon */
+.logo i {
+    margin-right: 0.5rem;
 }
-
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.nav-icon-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+}
+.nav-icon-btn i {
+    font-size: 1.25rem;
+    color: var(--primary-color);
+}
 .logout-btn {
     display: inline-block;
     padding: 0.6rem 1.2rem;
@@ -74,8 +90,8 @@ h1, h2, h3, h4, .logo {
 /* ======== SIDEBAR ======== */
 .sidebar {
     flex: 0 0 220px; 
-    background-color: var(--card-background); /* NEW: Light Cream */
-    border-radius: 8px;
+    background-color: var(--card-background);
+    border-radius: 12px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.05);
     padding: 1rem 0;
     height: fit-content;
@@ -87,7 +103,6 @@ h1, h2, h3, h4, .logo {
     padding: 0;
     margin: 0;
 }
-
 .sidebar ul li a {
     display: block;
     padding: 1rem 1.5rem;
@@ -97,34 +112,29 @@ h1, h2, h3, h4, .logo {
     border-left: 4px solid transparent;
     transition: background-color 0.2s, color 0.2s;
 }
-
 .sidebar ul li a i {
     margin-right: 0.75rem;
     width: 20px;
     text-align: center;
 }
-
 .sidebar ul li a:hover {
     background-color: #fff;
     color: var(--accent-color);
 }
-
 .sidebar ul li a.active {
-    border-left-color: var(--primary-color); /* NEW: Deep Maroon */
-    color: var(--primary-color); /* NEW: Deep Maroon */
-    background-color: #fff; /* White accent */
+    border-left-color: var(--primary-color);
+    color: var(--primary-color);
+    background-color: #fff;
 }
 
 /* ======== MAIN CONTENT ======== */
 .main-content {
     flex: 1; 
 }
-
-/* Content Sections */
 .content-section {
     display: none; 
-    background-color: var(--card-background); /* NEW: Light Cream */
-    border-radius: 8px;
+    background-color: var(--card-background);
+    border-radius: 12px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.05);
     padding: 2rem;
     border: 1px solid var(--light-border);
@@ -133,22 +143,22 @@ h1, h2, h3, h4, .logo {
     display: block; 
 }
 .content-section h2 {
-    margin-top: 0;
     font-size: 1.75rem;
+    color: var(--primary-color);
+    margin-top: 0;
     border-bottom: 2px solid var(--border-color);
     padding-bottom: 0.75rem;
     margin-bottom: 1.5rem;
-    color: var(--primary-color); /* NEW: Deep Maroon */
 }
 
-/* Stat Cards (Dashboard) */
+/* Stat Cards */
 .stat-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1.5rem;
 }
 .stat-card {
-    background-color: #fff; /* NEW: White */
+    background-color: #fff;
     border: 1px solid var(--light-border);
     border-radius: 8px;
     padding: 1.5rem;
@@ -165,16 +175,13 @@ h1, h2, h3, h4, .logo {
     font-weight: bold;
     color: var(--primary-color);
 }
-.stat-card:nth-child(2) p { color: var(--accent-color); }
-.stat-card:nth-child(4) p { color: var(--danger-color); }
 
-/* Product Form (Add New) */
+/* Product Form */
 .product-form .form-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1.5rem;
 }
-
 .input-group {
     margin-bottom: 1.25rem;
     display: flex;
@@ -184,57 +191,40 @@ h1, h2, h3, h4, .logo {
     margin-bottom: 0.5rem;
     font-weight: 500;
 }
-.input-group input[type="text"],
-.input-group input[type="number"],
-.input-group input[type="date"],
-.input-group select,
-.input-group textarea {
+.input-group input,
+.input-group select {
     width: 100%;
     padding: 0.75rem;
-    border: 1px solid var(--border-color); /* NEW: Taupe border */
+    border: 1px solid var(--border-color);
     border-radius: 6px;
     box-sizing: border-box; 
     font-size: 1rem;
     font-family: inherit;
     background-color: #fff;
 }
-.input-group textarea {
-    resize: vertical;
-}
-.input-group input[type="file"] {
-    padding: 0.5rem;
-}
-
 .input-group input:focus,
-.input-group select:focus,
-.input-group textarea:focus {
+.input-group select:focus {
     outline: none;
     border-color: var(--primary-color);
     box-shadow: 0 0 0 2px rgba(86, 28, 36, 0.2);
 }
-
-.submit-btn {
-    padding: 0.85rem 1.5rem;
-    font-size: 1.1rem;
-    font-weight: 600;
-    background-color: var(--primary-color); /* NEW: Deep Maroon */
-    color: white;
+.form-button {
     border: none;
+    padding: 0.75rem 1.5rem;
     border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.2s;
-}
-.submit-btn:hover {
-    background-color: var(--accent-color); /* NEW: Medium Maroon */
-}
-
-.error-text {
-    color: var(--danger-color);
+    font-size: 1rem;
     font-weight: 500;
-    display: none;
+    transition: background-color 0.2s;
+    background-color: var(--primary-color);
+    color: white;
+    margin-top: 1rem;
+}
+.form-button:hover {
+    background-color: var(--accent-color);
 }
 
-/* Product Table (My Products) */
+/* Product Table */
 .product-table-container {
     overflow-x: auto;
 }
@@ -251,10 +241,9 @@ h1, h2, h3, h4, .logo {
     vertical-align: middle;
 }
 #product-table th {
-    background-color: #fff; /* NEW: White */
+    background-color: #fff;
     font-weight: 600;
 }
-
 .btn-edit, .btn-delete {
     background: none;
     border: 1px solid #ccc;
